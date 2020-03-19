@@ -72,5 +72,10 @@ public class PlayerMovement : MonoBehaviour
         {            
             FindObjectOfType<GameManager>().EndGame();
         }
+
+        if (FindObjectOfType<GameManager>().gameEnded && Input.anyKey)
+        {
+            FindObjectOfType<GameManager>().RestartGame();
+        }
     }
 }
